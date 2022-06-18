@@ -1,0 +1,167 @@
+body {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 16pt;
+    margin: 3em;
+    background-color: aquamarine;
+    color: black;
+    }
+h1{
+   font-size: 5vw;
+   color:goldenrod;
+   justify-content: center;
+   margin: auto;
+   width: fit-content;
+   /* border: 2px solid red; */
+   flex:100%;
+}
+main{
+    max-width: 70%;
+}
+main p{
+    max-width: 60em;
+}
+nav{
+   display: flex;
+   position: absolute;
+   justify-content: center;
+   top : 5px;
+   margin: auto;
+   width: fit-content;
+   /* border: 1px solid green; */
+   cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png")16 16,  auto;
+}
+header{
+    width: 100%;
+}
+
+p:hover{
+    /* border : 1px solid black; */
+    padding : 0px;
+}
+p{
+   padding: 1px;    
+}
+footer{
+    flex:auto;
+    display: flex;
+    position: relative;
+    max-height: 1rem;
+    bottom: 1%;
+    /* border: 2px solid orangered; */
+    margin-top: 5em;
+    font-size: 10pt;
+    align-content: flex-end;
+}
+aside {
+    margin-left: 15px;
+    margin-top: 70px;
+    width:15rem;    
+    /* border: 2px solid gray; */
+}
+h2{
+    /* border: 1px solid black; */
+    width: 100%;
+    padding-left: 20%;
+}
+img {
+    width: 20rem;
+    height: auto;
+    max-height:100%;
+}
+.profilePic{
+    width: 500px;
+    height: auto;
+    padding: 1px;
+    text-align: center;  
+    /* border: 2px solid royalblue; */
+}
+section{
+    display:flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height:50%;
+    padding: 5px;
+    margin: 10px;
+    width: 47%;
+    height: auto;
+    background-color: coral;
+    border: 2px solid black;
+}
+.question{
+    flex:auto;
+    height: 2em;
+    background-color: aliceblue;
+    /* border: 3px solid lightslategray; */
+}
+.roguePic{
+    flex:auto;
+    max-width:45%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+#q1p1{
+    flex:auto;
+}
+#q1p2{
+    flex:auto;
+    max-width: 48%;
+}
+table{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    border: 5px solid grey;
+    background: darksalmon;
+}
+article p{
+    max-width: 70%;
+    margin-left: 10%;
+}
+@media screen and (max-width: 80em) {
+    h1 {
+        font-size: 16pt;
+    }
+    body{
+        font-size: 10pt;
+    }
+    section{
+        display: flex; 
+        flex-wrap: wrap;
+        flex-direction: row; 
+        width:100%;
+        
+    }
+    img{
+        max-width: 30%;
+    }
+    .question{
+       flex:auto;
+        width: 100%;
+    }
+    .roguePic{
+        flex:auto;
+        max-width: fit-content;
+        height:300px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+    }
+    #q1p1{
+       flex:auto;
+    }
+    #q1p2{
+        max-width: 45%;
+        flex: auto;
+    }
+}

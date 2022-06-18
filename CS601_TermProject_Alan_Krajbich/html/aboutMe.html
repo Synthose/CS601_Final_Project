@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me!</title>
+</head>
+<body>
+  <div id="app">
+      <h1>{{courseName}}</h1>
+      
+      <!--Bind link property from Vue instance-->
+      <a :href="link">View Course Details</a>
+  </div>
+  
+  <!--Include Vue-->
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  <!--Create Vue instance-->
+  <script type="module">
+    import { createApp } from 'vue'
+      let app = createApp({
+          data() {
+            return{
+              courseName: "S601: Web Application Development",
+              link: "http://www.bu.edu/csmet/academic-programs/courses/cs601/"
+            }
+          }
+      }).mount('#app')
+   </script>
+</body>
+</html>
