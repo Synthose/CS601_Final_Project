@@ -25,14 +25,8 @@
   <!--Create Vue instance-->
   <script type="module">
     import { createApp } from 'vue'
-      let app = createApp({
-          data() {
-            return{
-              courseName: "S601: Web Application Development",
-              link: "http://www.bu.edu/csmet/academic-programs/courses/cs601/"
-            }
-          }
-      }).mount('#app')
+    import App from '../scripts/aboutMe.vue'
+      let app = createApp(App).mount('#app')
    </script>
 </body>
 </html>
