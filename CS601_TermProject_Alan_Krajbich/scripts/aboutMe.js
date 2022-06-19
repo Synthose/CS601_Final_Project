@@ -12,7 +12,7 @@ export default {
       }
     },
     methods: {
-      setRandomMessage: function() {
+      setRandomMessage() {
         this.snappyMessage = this.messages[Math.floor(Math.random() * this.messages.length)];
       }
     },
