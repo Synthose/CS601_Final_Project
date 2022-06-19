@@ -24,8 +24,8 @@ export default {
       setRandomMessage: function() {
         this.snappyMessage = this.messages[Math.floor(Math.random() * this.messages.length)];
       },
-      checkIfLie(itemClass){
-        if(itemClass === "lie"){
+      checkIfLie(event){
+        if(event.target.class === "lie"){
           this.question_1_response = this.correct;
         }else{
           this.question_1_response = this.incorrect;
