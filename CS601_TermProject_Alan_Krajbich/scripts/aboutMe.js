@@ -25,7 +25,7 @@ export default {
         this.snappyMessage = this.messages[Math.floor(Math.random() * this.messages.length)];
       },
       checkIfLie: function(){
-        if( EventTarget == "lie"){
+        if( PointerEvent.currentTarget.className == "lie"){
           this.question_1_response = this.correct;
         }else{
           this.question_1_response = this.incorrect;
