@@ -24,15 +24,15 @@ export default {
       setRandomMessage: function() {
         this.snappyMessage = this.messages[Math.floor(Math.random() * this.messages.length)];
       },
-      checkIfLie(event){
-        if(event.target.class === "lie"){
+      checkIfLie: function(){
+        if( EventTarget == "lie"){
           this.question_1_response = this.correct;
         }else{
           this.question_1_response = this.incorrect;
         }
-      }
+      },
     },
-    computer: {
+    computed: {
     },
     created() {
       this.setRandomMessage();
