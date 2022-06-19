@@ -2,7 +2,7 @@ export default {
   name: "#app",
     data() {
       return{
-        snappyMessage: setRandomMessage(),
+        snappyMessage: 'awating message',
         link: "http://www.bu.edu/csmet/academic-programs/courses/cs601/",
         messages: [
           "hello",
@@ -12,10 +12,13 @@ export default {
       }
     },
     methods: {
-      setRandomMessage() {
+      setRandomMessage: function() {
         this.snappyMessage = this.messages[Math.floor(Math.random() * this.messages.length)];
       }
     },
-    created: {
+    computer: {
+    },
+    created() {
+      this.setRandomMessage();
     },
 }
