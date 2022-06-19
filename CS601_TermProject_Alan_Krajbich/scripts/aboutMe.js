@@ -17,22 +17,25 @@ export default {
         correctColor: "green",
         incorrectColor: "red",
         unknownColor: "grey",
-        question_1_response: ""
+        questionResponses:[
+        "",
+         "",
+         "",
+         "",
+         "",
+        ]
       }
     },
     methods: {
       setRandomMessage: function() {
         this.snappyMessage = this.messages[Math.floor(Math.random() * this.messages.length)];
       },
-      checkIfLie: function(){
-        var a = event;
-        var b = a.target;
-        var c = b.value;
-        var d = b.className;
+      checkIfLie: function(qNumber) {
+        
         if( event.target.className == "lie"){
-          this.question_1_response = this.correct;
+          this.questionResponses[qNumber] = this.correct;
         }else{
-          this.question_1_response = this.incorrect;
+          this.questionResponses[qNumber] = this.incorrect;
         }
       },
     },
