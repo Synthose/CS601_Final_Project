@@ -29,7 +29,7 @@ export default {
         var b = a.target;
         var c = b.value;
         var d = b.className;
-        if( Event.target.className == "lie"){
+        if( event.target.className == "lie"){
           this.question_1_response = this.correct;
         }else{
           this.question_1_response = this.incorrect;
