@@ -36,6 +36,20 @@ main{
     padding: 2%;
     
 }
+main.characterCreator{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 80%;
+}
+main.characterCreator h2{
+    
+    justify-content: center;
+    background-color: #04AA6D;
+}
+#YourCharacter{
+    border: #4d1212 3px solid;
+}
 .mainHolder{
     max-width: 70%;
     flex: 100%;

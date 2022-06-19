@@ -30,14 +30,40 @@ function clicked(){
     const value = Object.fromEntries(data.entries());
     let seed = getRandomSeed(value)+"";
     let myClass = getClass(seed);
+    let myRace = getRace(seed);
+    let myAlignment = getAlignment(seed);
+    let classbox = document.getElementById('classBox');
+    classbox.innerHTML=myClass;
+    let racebox = document.getElementById('raceBox');
+    racebox.innerHTML=myRace;
+    let alignmentbox = document.getElementById('alignBox');
+    alignmentbox.innerHTML=myAlignment;  
     console.log(myClass);
     return false;
 }
+
 function getClass(seed){
   let baseNum = seed.substring(0,4);
-  let myClass = classes[baseNum%classes.length];
+  let allClasses = classes.values;
+  let myClass = allClasses[baseNum%allClasses.length];
   let className = myClass.name;
   return className;
+}
+
+function getRace(seed){
+  let baseNum = seed.substring(2,Math.min(6,seed.length));
+  let allRaces = races.values;
+  let myRace = allRaces[baseNum%allRaces.length];
+  let raceName = myRace.name;
+  return raceName;
+}
+
+function getAlignment(seed){
+  let baseNum = seed.substring(4,Math.min(8,seed.length));
+  let allAlignments = alignment.values;
+  let myAlignment = allAlignments[baseNum%allAlignments.length];
+  let alignmentName = myAlignment.name;
+  return alignmentName;
 }
 function getRandomSeed(values){
   let seed = 0;
@@ -48,6 +74,7 @@ function getRandomSeed(values){
       v = v.split("");
       for(let i = 0; i < v.length; i++){
         let num = v[i].charCodeAt(0);
+        num %= 100;
         if(num % 3 ===0){
           seed += num;
         }else if(num % 3 ===1){
@@ -60,7 +87,9 @@ function getRandomSeed(values){
       v = Number.parseInt(v);
       seed += v;
     }
-    console.log(seed);
-    return seed;
+    
   }
+  seed = Math.abs(seed%Number.MAX_VALUE);
+  console.log(seed);
+  return seed;
 }
