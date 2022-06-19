@@ -33,7 +33,39 @@
             <div class="truth" @click="checkIfLie()">Philosphy Major</div>
             <div class="truth" @click="checkIfLie()">Math Major</div>
           </div>
-          <p>{{question_1_response}}</p>
+          <p class="notice">{{question_1_response}}</p>
+          <hr>
+          <p>Hobbies Include:</p>
+          <div class="flex-container ttol">
+            <div class="truth" @click="checkIfLie()">Euro Games</div>
+            <div class="truth" @click="checkIfLie()">Growing Peppers</div>
+            <div class="lie" @click="checkIfLie()">Playing Mandolin</div>
+          </div>
+          <p class="notice">{{question_2_response}}</p>
+          <hr>
+          <p>Countries I've Lived In:</p>
+          <div class="flex-container ttol">
+            <div class="truth" @click="checkIfLie()">Canada</div>
+            <div class="truth" @click="checkIfLie()">Japan</div>
+            <div class="lie" @click="checkIfLie()">Brazil</div>
+          </div>
+          <p class="notice">{{question_3_response}}</p>
+          <hr>
+          <p>Food Allergies Include:</p>
+          <div class="flex-container ttol">
+            <div class="truth" @click="checkIfLie()">Onions</div>
+            <div class="lie" @click="checkIfLie()">Almonds</div>
+            <div class="truth" @click="checkIfLie()">Coconut</div>
+          </div>
+          <p class="notice">{{question_4_response}}</p>
+          <hr>
+          <p>Former Competive :</p>
+          <div class="flex-container ttol">
+            <div class="lie" @click="checkIfLie()">High Jump</div>
+            <div class="truth" @click="checkIfLie()">Down-Hill Skiing</div>
+            <div class="truth" @click="checkIfLie()">Fencing</div>
+          </div>
+          <p class="notice">{{question_5_response}}</p>
         </main>
       </div>
       <aside>

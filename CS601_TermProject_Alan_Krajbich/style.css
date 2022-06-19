@@ -138,9 +138,11 @@ table{
 height:auto;
 border: 2px solid red;
 display: inline;
-
 }
-
+.notice{
+    font-size: small;
+    color: red;
+}
 .ttol{
     width:80%;
     justify-content: center;
@@ -151,10 +153,14 @@ display: inline;
 }
 
 .flex-container > div {
+    display: flex;
     background-color: #f1f1f1;
     width: 100px;
+    height: 100px;
     margin: 10px;
     text-align: center;
+    align-items:center;
+    justify-content:center;
     line-height:30px;
     font-size: 20px;
 }
