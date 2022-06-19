@@ -16,12 +16,8 @@
         <form name="DnDForm" onsubmit="return clicked()">
 
             <div class="formInstructions" id="fName">
-                <p>Please enter your first name!</p>
-                <input type ="text" id="firstName" placeholder="Bob" name="firstName" required minlength="2" pattern="[a-zA-Z\s]{2,}"><br>
-            </div>
-
-            <div class="formInstructions" id="lName">
-                <p>Please enter your last name!</p>
+                <p>Please enter your name!</p>
+                <input type ="text" id="firstName" placeholder="Bob" name="firstName" required minlength="2" pattern="[a-zA-Z\s]{2,}">
                 <input type ="text" id="lastName" placeholder="Loblaw" name="lastName" required minlength="2" pattern="[a-zA-Z\s]{2,}"><br>
             </div>
 
@@ -52,7 +48,25 @@
             </div>
             
             <div class="formInstructions">
-                <p>Which Animals do you think you could take in a fight?</p>
+                <p>Range Time!</p>
+                <div class="slidecontainer">
+                    <label>Compared to the average person, how many pairs of pants do you own?</label><br>
+                    <span className='limit'>less</span>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="pants">
+                    <span className='limit'>more</span>
+                </div>
+                <div class="slidecontainer">
+                    <label>How likely are you to slap the big bags of rice at the grocery store?</label><br>
+                    <span className='limit'>less</span>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="rice">
+                    <span className='limit'>more</span>
+                </div>
+                <div class="slidecontainer">
+                    <label>How often do you make up lyrics to songs when singing outloud? </label><br>
+                    <span className='limit'>less</span>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="songs">
+                    <span className='limit'>more</span>
+                </div>
             </div>
             <button type="submit" id="submit">Submit for "processing"!</button> 
         </form>
