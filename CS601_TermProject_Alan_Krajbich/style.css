@@ -8,16 +8,27 @@ body {
     margin: 3em;
     background-color: #3FD39B;
     color: black;
-    }
+}
 h1{
    font-size: 5vw;
    color:#FF9500;
    justify-content: center;
    margin: auto;
    width: fit-content;
-   /* border: 2px solid red; */
+   text-align: center;
    flex:100%;
 }
+h3{
+    text-align: center;
+}
+
+h2{
+
+    /* border: 1px solid black; */
+    width: 100%;
+    padding-left: 20%;
+}
+
 main{
     margin-top: 10%;
     border: 10px solid #00AF6D;
@@ -76,14 +87,7 @@ aside {
     background-color: #FFC572;
 
 }
-h3{
-    text-align: center;
-}
-h2{
-    /* border: 1px solid black; */
-    width: 100%;
-    padding-left: 20%;
-}
+
 img {
     width: 20rem;
     height: auto;
@@ -177,6 +181,58 @@ article p{
     max-width: 70%;
     margin-left: 10%;
 }
+form{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border: 5px solid darkorange;
+    background-color: rgb(242, 194, 76);
+    justify-items: center;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    max-width: 100%;
+}
+#formBox{
+    width:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    flex:100%;
+}
+.formInstructions{
+    border: 6px solid rgb(14, 83, 110);
+    background-color: rgb(52, 124, 152);
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 8%;
+    margin-right: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    justify-content: center;
+}
+
+.formInstructions p{
+    flex: content;
+    text-align: center;
+    min-width:100%;
+}
+
+.formInstructions input{
+    margin-bottom: 5px;
+    background-color: rgb(131, 186, 207);
+
+}
+
+button#submit{
+    flex: content;
+    margin-top: 10px;
+    
+    margin-bottom: 10px;
+    width: fit-content;
+}
 @media screen and (max-width: 80em) {
     h1 {
         font-size: 16pt;
@@ -213,4 +269,5 @@ article p{
         max-width: 45%;
         flex: auto;
     }
+
 }

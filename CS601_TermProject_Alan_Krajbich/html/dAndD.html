@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "../scripts/onLoad.js"></script>
+    <script src = "../scripts/steamAPI.js"></script>
+    <link href="../style.css" rel="stylesheet">
+    <title>Lets Build you a D&D Character!</title>
+</head>
+<body>
+    <nav></nav>
+    <h1>Please fill out and Submit!</h1>
+    <div id="formBox">
+        <form name="DnDForm" onsubmit="return clicked()">
+
+            <div class="formInstructions" id="fName">
+                <p>Please enter your first name!</p>
+                <input type ="text" id="firstName" placeholder="Bob" name="firstName" required minlength="2" pattern="[a-zA-Z\s]{2,}"><br>
+            </div>
+
+            <div class="formInstructions" id="lName">
+                <p>Please enter your last name!</p>
+                <input type ="text" id="lastName" placeholder="Loblaw" name="lastName" required minlength="2" pattern="[a-zA-Z\s]{2,}"><br>
+            </div>
+
+            <div class="formInstructions" id="job">
+                <p>As best you can, state your profession</p>
+                <input type ="text" id="job" placeholder="Lawblog" name="prof" required><br>
+                <p class="warning" hidden>Try something simpler</p>
+            </div>
+
+            <div class="formInstructions">
+                <p>Choose your favorite time of day</p>
+
+                <label for="Morning">
+                <input type ="radio" id="Morning" name="dayTest" value="Morning" required> Morning
+                </label>
+
+                <label for="Midday">
+                <input type ="radio" id="Midday" name="dayTest" value="Midday"> Mid-Day  
+                </label>
+
+                <label for="Dusk">
+                <input type ="radio" id="dusk" name="dayTest" value="dusk" > Dusk
+                </label>
+
+                <label for="Night">
+                <input type ="radio" id="Night" name="dayTest" value="Night" > Night
+                </label>
+            </div>
+            
+            <div class="formInstructions">
+                <p>Which Animals do you think you could take in a fight?</p>
+            </div>
+            <button type="submit" id="submit">Submit for "processing"!</button> 
+        </form>
+    </div>
+    <main>
+        
+    </main>
+    
+</body>
+</html>
