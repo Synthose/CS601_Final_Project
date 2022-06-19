@@ -12,14 +12,44 @@
   <nav></nav>
   <div id="app">
       <h1>{{snappyMessage}}</h1>
-      <main>
+      <div class="mainHolder">
+        <main>
+          <h3>About Me!</h3>
+          <p>Welcome to the "About Me" section. There will be a brief summary of who I am, and what I'm doing here, followed by a small quiz. I hope you're taking notes!</p>
+          <p>Lets get the obvious stuff out of the way:
+            <ul>
+              <li>I'm a grad student at Boston University</li>
+              <li>I live in Portland, Oregon</li>
+              <li>I was born in Toronto, Canada</li>
+              <li>I am a software engineer for Zebra</li>
+              <li>I did my undergrad at St.Johns College in Santa Fe, NM</li>
+          </p>
+
+          <p>Now, let's get into the fun stuff: Two Truths and a lie!</p>
+          <p>The Rules are simple, I will give you a prompts, and have 3 options for things that apply. You must click on the one one that is NOT true. Simple stuff, right? Lets dive right in!</p>
+          <p>In undergrad, I was a:</p>
+          <div class="flex-container ttol">
+            <div class="lie"   @click="checkIfLie(item.class)">English Major</div>
+            <div class="truth" @click="checkIfLie(item.class)">Philosphy Major</div>
+            <div class="truth" @click="checkIfLie(item.class)">Math Major</div>
+          </div>
+          <p>{{question_1_response}}</p>
+        </main>
+      </div>
+      <aside>
          <h3>A Minor Rant</h3>
-         <p>Salutations. My name is Alan Krajbich, and I have cobbled this site together in a desperate attempt to demonstrate proficienct with front end development. So far, I have spend the majority of the day trying to get Vue to even work a little. I have mostly failed.</p>
-         <p> To this end, I throw myself upon the great mercy and kindness of whoever grades this. Believe that I really did try to get everything to work. Vue is in here, I think. I honestly can't tell at this point. I built a full site on codesandbox that was made in VUE3, but when I exported it, it just never worked. Like an alien species, it must reside in its atmospheric tank, with special nutrients and food that can't exist anywhere else.</p>
-         <p>I know that this course is about to undergo a big update, but it was a litle frustrating to have all the examples and code snippets on the course page refer to vue2, while the in class demos use vue3. I understand the point of this class, and grad school in general, is to promote self led learning, but being practically introduced to Vue on Wednesday, then having 2 assignments back-to-back that both require mastery of Vue is a little extreme.</p>
-         <p> with that being said, I appreciate the difficult position this leaders of this class are in. Its not much time, and there is so much to cover. I don't hold any grudges, I merely wish to explain the general state of my code base, and the overall scattered nature of... everything. While I can get SOME of view to work, there is still much for me to learn.</p>
+         <p>  Salutations. My name is Alan Krajbich, and I have cobbled this site together in a desperate attempt to demonstrate proficienct with front end development. So far, I have spend the majority of the day trying to get Vue to even work a little. I have mostly failed.</p>
+         <p>  To this end, I throw myself upon the great mercy and kindness of whoever grades this. Believe that I really did try to get everything to work. Vue is in here, I think. I honestly can't tell at this point. I built a full site on codesandbox that was made in VUE3, but when I exported it, it just never worked. Like an alien species, it must reside in its atmospheric tank, with special nutrients and food that can't exist anywhere else.</p>
+         <p>  I know that this course is about to undergo a big update, but it was a litle frustrating to have all the examples and code snippets on the course page refer to vue2, while the in class demos use vue3. I understand the point of this class, and grad school in general, is to promote self led learning, but being practically introduced to Vue on Wednesday, then having 2 assignments back-to-back that both require mastery of Vue is a little extreme.</p>
+         <p> With that being said, I appreciate the difficult position this leaders of this class are in. Its not much time, and there is so much to cover. I don't hold any grudges, I merely wish to explain the general state of my code base, and the overall scattered nature of... everything. While I can get SOME of view to work, there is still much for me to learn.</p>
          <p>Thank you for your patience.</p>
-      </main>
+      </aside>
+      <style>
+          aside {
+              float: right;
+              border-radius: 5px;
+          }
+      </style>
       <!--Bind link property from Vue instance-->
       <a :href="link">View Course Details</a>
   </div>
