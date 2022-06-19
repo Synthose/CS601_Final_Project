@@ -29,41 +29,41 @@
           <p>The Rules are simple, I will give you a prompts, and have 3 options for things that apply. You must click on the one one that is NOT true. Simple stuff, right? Lets dive right in!</p>
           <p>In undergrad, I was a:</p>
           <div class="flex-container ttol">
-            <div class="lie"   @click="checkIfLie()">English Major</div>
-            <div class="truth" @click="checkIfLie()">Philosphy Major</div>
-            <div class="truth" @click="checkIfLie()">Math Major</div>
+            <div class="lie"   @click="checkIfLie(0)">English Major</div>
+            <div class="truth" @click="checkIfLie(0)">Philosphy Major</div>
+            <div class="truth" @click="checkIfLie(0)">Math Major</div>
           </div>
           <p class="notice">{{questionResponses[0]}}</p>
           <hr>
           <p>Hobbies Include:</p>
           <div class="flex-container ttol">
-            <div class="truth" @click="checkIfLie()">Euro Games</div>
-            <div class="truth" @click="checkIfLie()">Growing Peppers</div>
-            <div class="lie" @click="checkIfLie()">Playing Mandolin</div>
+            <div class="truth" @click="checkIfLie(1)">Euro Games</div>
+            <div class="truth" @click="checkIfLie(1)">Growing Peppers</div>
+            <div class="lie" @click="checkIfLie(1)">Playing Mandolin</div>
           </div>
           <p class="notice">{{questionResponses[1]}}</p>
           <hr>
           <p>Countries I've Lived In:</p>
           <div class="flex-container ttol">
-            <div class="truth" @click="checkIfLie()">Canada</div>
-            <div class="truth" @click="checkIfLie()">Japan</div>
-            <div class="lie" @click="checkIfLie()">Brazil</div>
+            <div class="truth" @click="checkIfLie(2)">Canada</div>
+            <div class="truth" @click="checkIfLie(2)">Japan</div>
+            <div class="lie" @click="checkIfLie(2)">Brazil</div>
           </div>
           <p class="notice">{{questionResponses[2]}}</p>
           <hr>
           <p>Food Allergies Include:</p>
           <div class="flex-container ttol">
-            <div class="truth" @click="checkIfLie()">Onions</div>
-            <div class="lie" @click="checkIfLie()">Almonds</div>
-            <div class="truth" @click="checkIfLie()">Coconut</div>
+            <div class="truth" @click="checkIfLie(3)">Onions</div>
+            <div class="lie" @click="checkIfLie(3)">Almonds</div>
+            <div class="truth" @click="checkIfLie(3)">Coconut</div>
           </div>
           <p class="notice">{{questionResponses[3]}}</p>
           <hr>
           <p>Former Competive :</p>
           <div class="flex-container ttol">
-            <div class="lie" @click="checkIfLie()">High Jump</div>
-            <div class="truth" @click="checkIfLie()">Down-Hill Skiing</div>
-            <div class="truth" @click="checkIfLie()">Fencing</div>
+            <div class="lie" @click="checkIfLie(4)">High Jump</div>
+            <div class="truth" @click="checkIfLie(4)">Down-Hill Skiing</div>
+            <div class="truth" @click="checkIfLie(4)">Fencing</div>
           </div>
           <p class="notice">{{questionResponses[4]}}</p>
         </main>
