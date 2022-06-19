@@ -25,7 +25,7 @@ export default {
         this.snappyMessage = this.messages[Math.floor(Math.random() * this.messages.length)];
       },
       checkIfLie: function(){
-        var a = Event;
+        var a = event;
         var b = a.target;
         var c = b.value;
         var d = b.className;
