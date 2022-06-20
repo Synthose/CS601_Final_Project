@@ -32,14 +32,30 @@ function clicked(){
     let myClass = getClass(seed);
     let myRace = getRace(seed);
     let myAlignment = getAlignment(seed);
+    makeName();
     let classbox = document.getElementById('classBox');
     classbox.innerHTML=myClass;
     let racebox = document.getElementById('raceBox');
     racebox.innerHTML=myRace;
     let alignmentbox = document.getElementById('alignBox');
     alignmentbox.innerHTML=myAlignment;  
-    console.log(myClass);
+    getStats(seed);
     return false;
+}
+
+function getStats(seed){
+  let stats = [6];
+  for(let i = 0; i < 6 ; i++){
+    let num = 8 + Number.parseInt(seed.substring(i,i+2))%13;
+    stats[i] = num;
+  }
+  document.getElementById('strBox').innerHTML = "Strengeth: " +stats[0];
+  document.getElementById('dexBox').innerHTML = "Dexterity: " +stats[1];
+  document.getElementById('conBox').innerHTML = "Constitution: " +stats[2];
+  document.getElementById('intBox').innerHTML = "Intelligence: " +stats[3];
+  document.getElementById('wisBox').innerHTML = "Wisdom: " +stats[4];
+  document.getElementById('chaBox').innerHTML = "Charisma: " +stats[5];
+
 }
 
 function getClass(seed){
@@ -50,7 +66,7 @@ function getClass(seed){
   return className;
 }
 
-function getRace(seed){
+ function getRace(seed){
   let baseNum = seed.substring(2,Math.min(6,seed.length));
   let allRaces = races.values;
   let myRace = allRaces[baseNum%allRaces.length];
@@ -64,6 +80,15 @@ function getAlignment(seed){
   let myAlignment = allAlignments[baseNum%allAlignments.length];
   let alignmentName = myAlignment.name;
   return alignmentName;
+}
+
+async function makeName(myName){
+  let names = await fetch("https://random-data-api.com/api/name/random_name");
+  names = await names.json();
+  myName = names.name;
+  let namebox = document.getElementById('nameBox');
+    namebox.innerHTML="Name: "+myName;
+
 }
 function getRandomSeed(values){
   let seed = 0;
@@ -85,7 +110,7 @@ function getRandomSeed(values){
       }
     }else{
       v = Number.parseInt(v);
-      seed += v;
+      seed *= Math.sqrt();
     }
     
   }

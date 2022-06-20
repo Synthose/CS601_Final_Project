@@ -43,13 +43,65 @@ main.characterCreator{
     width: 80%;
 }
 main.characterCreator h2{
-    
+    z-index: 5;
+    width:fit-content;
+    text-align: center;
+    position: absolute;
+    padding-left: 0;
+    top: 15%;
+    left:35%;
+    font-family: cursive ;
+    color: #4a2600  
+}
+#classBox,
+#raceBox,
+#alignBox,
+#nameBox,
+#statsBox{
+    position:absolute;
+    z-index: 5;
+    width:fit-content;
+    text-align: center;
     justify-content: center;
-    background-color: #04AA6D;
+    font-family: cursive;
+   
+    color: #4a2600  
+}
+#nameBox{
+    top: 32%;
+    left: 40%;
+}
+
+#classBox{
+    top: 25%;
+    left:35%;
+}
+#raceBox{
+    top: 25%;
+    left:20%;
+}
+#alignBox{
+    top: 25%;
+    left:60%;
+}
+#statsBox{
+    top: 38%;
+    left:25%;
+}
+.stat{
+    margin-top: 10px;
 }
 #YourCharacter{
+    position:relative;
     border: #4d1212 3px solid;
 }
+
+#scroll{
+    position: relative;
+    width:100%;
+    z-index: 1;
+  }
+
 .mainHolder{
     max-width: 70%;
     flex: 100%;
@@ -255,7 +307,7 @@ button#submit{
   }
   
 
-  .slider {
+.slider {
     appearance: none;
     width: 85%; 
     height: 25px; 
@@ -286,6 +338,7 @@ button#submit{
     background: #04AA6D; 
     cursor: pointer; 
   }
+
 @media screen and (max-width: 80em) {
     h1 {
         font-size: 16pt;
@@ -302,6 +355,9 @@ button#submit{
     }
     img{
         max-width: 30%;
+    }
+    img#scroll{
+        max-width: 100%;
     }
     .question{
        flex:auto;
@@ -322,5 +378,11 @@ button#submit{
         max-width: 45%;
         flex: auto;
     }
-
+    main.characterCreator{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 80%;
+        font-size: 16pt;
+    }
 }
