@@ -29,41 +29,41 @@
           <p>The Rules are simple, I will give you a prompts, and have 3 options for things that apply. You must click on the one one that is NOT true. Simple stuff, right? Lets dive right in!</p>
           <p>In undergrad, I was a:</p>
           <div class="flex-container ttol">
-            <div class="lie"   @click="checkIfLie(0)">English Major</div>
-            <div class="truth" @click="checkIfLie(0)">Philosphy Major</div>
-            <div class="truth" @click="checkIfLie(0)">Math Major</div>
+            <img src="../images/englishMajor.jpg" class="lie"   @click="checkIfLie(0)" alt="English Major">
+            <img src="../images/philosophy.jpg"   class="truth" @click="checkIfLie(0)" alt="Philosphy Major">
+            <img src="../images/Math.jpg"         class="truth" @click="checkIfLie(0)" alt="Math Major">
           </div>
           <p class="notice">{{questionResponses[0]}}</p>
           <hr>
           <p>Hobbies Include:</p>
           <div class="flex-container ttol">
-            <div class="truth" @click="checkIfLie(1)">Euro Games</div>
-            <div class="truth" @click="checkIfLie(1)">Growing Peppers</div>
-            <div class="lie" @click="checkIfLie(1)">Playing Mandolin</div>
+            <img src="../images/boardgame.jpg" class="truth" @click="checkIfLie(1)" alt="Euro Games">
+            <img src="../images/chili.jpg" class="truth" @click="checkIfLie(1)"alt="Growing Peppers">
+            <img src="../images/mandolin.jpg" class="lie" @click="checkIfLie(1)" alt="Playing Mandolin">
           </div>
           <p class="notice">{{questionResponses[1]}}</p>
           <hr>
           <p>Countries I've Lived In:</p>
           <div class="flex-container ttol">
-            <div class="truth" @click="checkIfLie(2)">Canada</div>
-            <div class="truth" @click="checkIfLie(2)">Japan</div>
-            <div class="lie" @click="checkIfLie(2)">Brazil</div>
+            <img src="../images/canadaFlag.jpg" class="truth" @click="checkIfLie(2)" alt="Canada">
+            <img src="../images/JapanFlag.jpg" class="truth" @click="checkIfLie(2)"alt="Japan">
+            <img src="../images/BrazilFlag.jpg" class="lie" @click="checkIfLie(2)" alt="Brazil">
           </div>
           <p class="notice">{{questionResponses[2]}}</p>
           <hr>
           <p>Food Allergies Include:</p>
           <div class="flex-container ttol">
-            <div class="truth" @click="checkIfLie(3)">Onions</div>
-            <div class="lie" @click="checkIfLie(3)">Almonds</div>
-            <div class="truth" @click="checkIfLie(3)">Coconut</div>
+            <img src="../images/onions.jpg" class="truth" @click="checkIfLie(3)" alt="Onions">
+            <img src="../images/almonds.jpg" class="lie" @click="checkIfLie(3)" alt="Almonds">
+            <img src="../images/coconuts.jpg" class="truth" @click="checkIfLie(3)" alt= "Coconut">
           </div>
           <p class="notice">{{questionResponses[3]}}</p>
           <hr>
           <p>Former Competive :</p>
           <div class="flex-container ttol">
-            <div class="lie" @click="checkIfLie(4)">High Jump</div>
-            <div class="truth" @click="checkIfLie(4)">Down-Hill Skiing</div>
-            <div class="truth" @click="checkIfLie(4)">Fencing</div>
+            <img src="../images/highjump.jpg" class="lie"   @click="checkIfLie(4)" alt= "High Jump">
+            <img src="../images/skiing.jpg"   class="truth" @click="checkIfLie(4)" alt= "Down-Hill Skiing">
+            <img src="../images/fencing.jpg"  class="truth" @click="checkIfLie(4)" alt= "Fencing">
           </div>
           <p class="notice">{{questionResponses[4]}}</p>
         </main>

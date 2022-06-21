@@ -107,10 +107,12 @@ function getRandomSeed(values){
         }else if(num % 3 ===2){
           seed -= num;
         }
+        seed %= 100000000000;
       }
     }else{
       v = Number.parseInt(v);
-      seed *= Math.sqrt();
+      seed *= Math.pow(v+1 , 2);
+      seed %= 100000000000;
     }
     
   }
